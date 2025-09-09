@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&family=Poppins:wght@300;400;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background: black;
+    color: #fff;
+}
+
+.main{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(assets/images/header-image.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    padding: 10px 0;
+    z-index: 9;
+}
+
+.box .navbar{
+    max-width: 80vw;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 62px;
+}
+
+.navbar .logo{
+    position: relative;
+    z-index: 10;
+    width: 150px;
+    cursor: pointer;
+}
+
+.navbar button{
+   border: 0;
+   outline: 0;
+   padding: 7px 20px;
+   margin-left: 10px;
+   font-size: 12px;
+   border-radius: 4px;
+   cursor: pointer;
+}
+
+.nav-left select , .nav-left option{
+    background-color: transparent;
+    color: #fff;
+    padding: 7px 10px;
+    display: inline-block;
+    border: 1px solid #fff;
+}
+
+.nav-left option:hover{
+    color: black;
+}
+
+.btn-red{
+    background-color: #db0001;
+    color: #fff;
+    padding: 7px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    font-size: 12px;
+}
+
+.box-content{
+    font-family: 'Martel Sans', sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    margin-top: 50px;
+}
+
+.box-content .content-main{
+    font-size: 6rem;
+    line-height: 70px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.box-content .content-mid{
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.box-content .content-last{
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.email-signup{
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    overflow: hidden;
+}
+
+.email-signup input{
+    flex: 1;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    color: #fff;
+    padding: 15px 30px;
+    outline: 0;
+    margin-left: 70px;
+    margin-right: 20px;
+    background-color: rgba(0, 0, 0, 0.768);
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.btn-login{
+    background:#db0001;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    font-size:16px;
+    cursor: pointer;
+    padding: 15px 40px;
+    border-radius: 4px;
+}
+
+
+.features{
+    padding: 50px 12%;
+    font-size: 22px;
+}
+
+.row{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+
+.text-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+
+.img-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+
+.img-col img{
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+
+.features h2{
+    font-size: 5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+
+/* ######################################### FAQ STYLING ###################################### */
+
+.faq{
+    padding: 10px 12%;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.faq h2{
+    font-weight: 500;
+    font-size: 4rem;
+}
+
+.accordion{
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+}
+
+.accordion li{
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+
+.accordion label{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 1.8rem;
+    font-weight: 500;
+    background: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+
+label::after{
+    content: "+";
+    font-size: 3.4rem;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s ease-in-out;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+.accordion .content{
+    background: #303030;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+.accordion input[type="radio"]:checked + label + .content{
+   max-height: 600px;
+   padding: 30px 20px;
+}
+
+.accordion input[type="radio"]:checked + label::after{
+   transform: rotate(135deg);
+}
+
+/* ############################## FOOTER STYLING ################################### */
+
+.footer{
+    padding: 50px 15% 10px;
+    border-top: 6px solid #333;
+    color: #777;
+}
+
+.footer p{
+    font-weight: 400;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+}
+
+
+.row{
+    display: flex;
+}
+
+.col{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-basis: 25%;
+}
+
+.row a{
+    display: block;
+    text-decoration: none;
+    color: #777;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.footer .row{
+    align-items: flex-start;
+    padding: 10px 0;
+}
+
+.footer select , .footer option{
+    background: transparent;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 3px;
+    margin-top: 20px;
+}
+
+.copyright-txt{
+    font-size: 1.4rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* ############################# MEDIA QUERIES ########################## */
+
+@media (max-width:768px){
+    .navbar .logo{
+        width: 100px;
+    }
+
+    .navbar button{
+        padding: 5px 10px;
+    }
+
+    .navbar select , .navbar option{
+        padding: 4px 8px;
+    }
+
+    .box-content{
+        position: unset;
+        transform: none;
+        padding-top: 150px;
+    }
+
+    .box-content .content-main{
+        font-size: 3rem;
+    }
+
+    .box-content .content-mid{
+        font-size: 1.5rem;
+    }
+
+    .box-content .content-last{
+        font-size: 1rem;
+    }
+
+    .email-signup input{
+        margin-left: 10px;
+        margin-right: 2px;
+    }
+
+    .btn-login{
+        padding: 3px;
+        font-size: 10px;
+    }
+
+    .email-signup button{
+        font-size: 1.2rem;
+        padding: 10px 15px;
+    }
+
+    .row .text-col{
+        font-size: 20px;
+    }
+
+    .text-col, .img-col{
+        flex-basis: 100%;
+    }
+
+    .features h2{
+        font-size: 3rem;
+    }
+
+    .features p{
+        font-size: 1.5rem;
+    }
+
+    .row:nth-child(2) , .row:nth-child(4){
+        flex-direction: column-reverse;
+    }
+
+    .features .row{
+        padding: 10px 0;
+    }
+
+    .faq  .email-signup{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .faq .btn-login{
+        padding: 2px;
+        font-size: 10px;
+    }
+
+    .faq h2{
+        font-size: 2rem;
+    }
+
+    .accordion .content{
+        font-size: 1.4rem;
+    }
+
+    .accordion li label{
+        padding: 10px;
+        font-size: 1.4rem ;
+    }
+
+    label::after{
+        font-size: 2.2rem;
+    }
+}
